@@ -1,4 +1,4 @@
-# angular 2 google maps demo
+# Angular2 + Google Maps demo
 
 Based off the plunker http://plnkr.co/edit/YX7W20?p=preview from https://angular-maps.com/
 
