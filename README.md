@@ -4,7 +4,7 @@ Based off the plunker http://plnkr.co/edit/YX7W20?p=preview from https://angular
 
 ## Installation
 
-1. Download the repo
+1. Clone or Download the repo
 2. Create a `config.js` file with the following: `var GOOGLEMAPSAPIKEY = 'YOUR-API-KEY';`, or just copy and rename `config.sample.js` to `config.js`.
 3. If you do not already have one, then per https://angular-maps.com/docs/getting-started.html , get an API key here: https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en#key
 4. Replace the `YOUR-API-KEY` in `config.js` with that actual Google Maps JavaScript API key.
