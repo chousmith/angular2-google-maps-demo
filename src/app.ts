@@ -34,10 +34,11 @@ import {
           [markerDraggable]="m.draggable"
           (dragEnd)="markerDragEnd(m, $event)">
 
-        <sebm-google-map-info-window
-          [maxWidth]="120">
-          <strong>InfoWindow #{{ i }}</strong><br />
-          <span *ngIf="m.label">label: {{ m.label }}</span>
+        <sebm-google-map-info-window>
+          <strong>InfoWindow #{{ i + 1 }}</strong>
+          <span *ngIf="m.title"><br />Title: {{ m.title }}</span>
+          <span *ngIf="m.label"><br />Marker Label: {{ m.label }}</span>
+          <span *ngIf="!m.label"><br />Marker Label: n/a</span>
         </sebm-google-map-info-window>
 
       </sebm-google-map-marker>
@@ -73,9 +74,17 @@ export class App {
 
   markers: marker[] = [
 	  {
+		  lat: 32.748069,
+		  lng: -117.164744,
+		  label: 'A',
+      title: 'Ninthlink, Inc.',
+		  draggable: false
+	  },
+	  {
 		  lat: 32.960909,
 		  lng: -117.268211,
-		  label: 'A',
+		  label: 'B',
+      title: 'Power Plant Park?',
 		  draggable: true
 	  }
   ]
@@ -85,6 +94,7 @@ interface marker {
 	lat: number;
 	lng: number;
 	label?: string;
+	title?: string;
 	draggable: boolean;
 }
 
