@@ -33,7 +33,9 @@ import {
           <strong>InfoWindow #{{ i + 1 }}</strong>
           <span *ngIf="m.title"><br />Title: {{ m.title }}</span>
           <span *ngIf="m.label"><br />Marker Label: {{ m.label }}</span>
-          <span *ngIf="!m.label"><br />Marker Label: n/a</span>
+          <span *ngIf="!m.label"><br />Marker Label: n/a</span><br />
+          Lat: {{ m.lat }}<br />
+          Lng: {{ m.lng }}
         </sebm-google-map-info-window>
 
       </sebm-google-map-marker>
@@ -57,14 +59,21 @@ export class App {
     console.log('map clicked: ');
     console.log( $event );
 
+    var alphamap = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+    var newlabel = alphamap[ this.markers.length % 7 ];
+
     this.markers.push({
       lat: $event.coords.lat,
-      lng: $event.coords.lng
+      lng: $event.coords.lng,
+      label: newlabel
     });
   }
 
   markerDragEnd(m: marker, $event: MouseEvent) {
     console.log('dragEnd', m, $event);
+    // (re)set the marker lat & lng?
+    m.lat = $event.coords.lat;
+    m.lng = $event.coords.lng;
   }
 
   markers: marker[] = [
