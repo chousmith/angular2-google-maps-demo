@@ -13,8 +13,8 @@ Based off the plunker http://plnkr.co/edit/YX7W20?p=preview from https://angular
 ## nuts and bolts and question marks
 
 * The `index.html` file is all you need to open to get this going.
-* It should load a full screen Google Maps map centered around [Ninthlink, Inc.](http://www.ninthlink.com/) assuming it is set up correct
-* It will add a Marker there and another Marker which can be dragged around.
+* It should load a full screen Google Maps map centered around [Ninthlink, Inc.](http://www.ninthlink.com/), assuming it is set up correct.
+* It should then add a Marker there, and another Marker which can be dragged around.
 * Clicking on the map will add another Marker where you clicked.
 * Clicking on a Marker will open an InfoWindow.
 * `systemjs.config.js` is what actually loads all the pieces, replacing the `<map-app>...</map-app>` in `index.html` with actual Angular2 + Google Maps functionality, assuming that you have a Google Maps JavaScript API key in place.
