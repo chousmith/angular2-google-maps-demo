@@ -19,7 +19,7 @@ Based off the plunker http://plnkr.co/edit/YX7W20?p=preview from https://angular
 * Clicking on a Marker will open an InfoWindow.
 * `systemjs.config.js` is what actually loads all the pieces, replacing the `<map-app>...</map-app>` in `index.html` with actual Angular2 + Google Maps functionality, assuming that you have a Google Maps JavaScript API key in place.
 * At this point, I have little / no idea how the `unpkg.com` scripts work, other than the `paths: { 'npm:': 'https://unpkg.com/' }`...
-* `.ts` files are TypeScript.
+* `.ts` files are TypeScript. https://atom.io/packages/atom-typescript seems like a nice thing.
 * See notes above and below about `config.js`.
 * do the `map` items in `systemjs.config.js` have to be in that order?
 
