@@ -13,11 +13,6 @@ import {
 
 @Component({
   selector: 'map-app',
-  styles: [`
-    .sebm-google-map-container {
-       height: 500px;
-     }
-  `],
   template: `
     <sebm-google-map
       [latitude]="lat"
