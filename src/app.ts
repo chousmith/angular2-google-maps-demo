@@ -34,8 +34,10 @@ import {
           [markerDraggable]="m.draggable"
           (dragEnd)="markerDragEnd(m, $event)">
 
-        <sebm-google-map-info-window>
-          <strong>InfoWindow content</strong>
+        <sebm-google-map-info-window
+          [maxWidth]="120">
+          <strong>InfoWindow #{{ i }}</strong><br />
+          <span *ngIf="m.label">label: {{ m.label }}</span>
         </sebm-google-map-info-window>
 
       </sebm-google-map-marker>
