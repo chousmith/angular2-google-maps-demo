@@ -42,15 +42,6 @@ import {
 
       </sebm-google-map-marker>
 
-      <!--
-      <sebm-google-map-circle [latitude]="lat + 0.3" [longitude]="lng"
-          [radius]="5000"
-          [fillColor]="'red'"
-          [circleDraggable]="true"
-          [editable]="true">
-      </sebm-google-map-circle>
-      -->
-
     </sebm-google-map>
 `})
 export class App {
